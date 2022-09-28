@@ -38,6 +38,14 @@
 <p><h4>2022/9/27</h4></p>
 <p>重新处理了代码，训练和测试的结果能对上了</p>
 
+<p><h4>2022/9/28</h4></p>
+<p>src\transformers\data\processors\glue.py</p>
+<p>Nlpcct5Level1Processor函数中的get_train_examples方法，调用了json库来读train_set.json，2.11.0中不再有_read_json(),这个方法了（我没找到？）</p>
+<p>src\transformers\modeling_longformer.py</p>
+<p>改为BCE</p>
+
+
+
 训练命令：
 CUDA_VISIBLE_DEVICES=7 python ./examples/run_glue.py     
 --model_type bert     
